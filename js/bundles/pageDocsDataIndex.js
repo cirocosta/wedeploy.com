@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([170,196,197,198,199,200,201,202],[
+webpackJsonppageComponent([170,197,198,199,200,201,202,203],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35992,7 +35992,9 @@ goog.loadModule(function (exports) {
   function __deltemplate_s336_5080d024(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null, 'class', 'col-xs-16 col-sm-8 update-feature');
     ie_open('div', null, null, 'class', 'feature-topper');
-    ie_void('span', null, null, 'class', 'feature-icon icon-16-' + opt_data.feature.icon);
+    if (opt_data.feature.icon) {
+      ie_void('span', null, null, 'class', 'feature-icon icon-16-' + opt_data.feature.icon);
+    }
     ie_open('h1', null, null, 'class', 'feature-header');
     var dyn22 = opt_data.feature.title;
     if (typeof dyn22 == 'function') dyn22();else if (dyn22 != null) itext(dyn22);
@@ -36003,11 +36005,13 @@ goog.loadModule(function (exports) {
     var dyn23 = opt_data.feature.description;
     if (typeof dyn23 == 'function') dyn23();else if (dyn23 != null) itext(dyn23);
     ie_close('p');
-    ie_open('div', null, null, 'class', 'read-more');
-    ie_open('a', null, null, 'href', opt_data.feature.url);
-    itext('Read more\u2026');
-    ie_close('a');
-    ie_close('div');
+    if (opt_data.feature.url) {
+      ie_open('div', null, null, 'class', 'read-more');
+      ie_open('a', null, null, 'href', opt_data.feature.url);
+      itext('Read more\u2026');
+      ie_close('a');
+      ie_close('div');
+    }
     ie_close('div');
     ie_close('div');
   }
@@ -36071,7 +36075,8 @@ exports.default = templates;
 /* 220 */,
 /* 221 */,
 /* 222 */,
-/* 223 */
+/* 223 */,
+/* 224 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36178,7 +36183,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsDataIndex, te
 
 
 /***/ }),
-/* 224 */,
 /* 225 */,
 /* 226 */,
 /* 227 */,
@@ -36373,7 +36377,9 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(pageDocsDataIndex, te
 /* 416 */,
 /* 417 */,
 /* 418 */,
-/* 419 */
+/* 419 */,
+/* 420 */,
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36425,7 +36431,7 @@ __webpack_require__(95);
 
 __webpack_require__(96);
 
-var _indexSoy = __webpack_require__(223);
+var _indexSoy = __webpack_require__(224);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36456,4 +36462,4 @@ _metalSoy2.default.register(pageDocsDataIndex, _indexSoy2.default);
 exports.default = pageDocsDataIndex;
 
 /***/ })
-],[419]);
+],[421]);

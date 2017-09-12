@@ -1,5 +1,5 @@
 var pageComponent =
-webpackJsonppageComponent([13,196,197,198,199,200,201,202],[
+webpackJsonppageComponent([13,197,198,199,200,201,202,203],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -35992,7 +35992,9 @@ goog.loadModule(function (exports) {
   function __deltemplate_s336_5080d024(opt_data, opt_ignored, opt_ijData) {
     ie_open('div', null, null, 'class', 'col-xs-16 col-sm-8 update-feature');
     ie_open('div', null, null, 'class', 'feature-topper');
-    ie_void('span', null, null, 'class', 'feature-icon icon-16-' + opt_data.feature.icon);
+    if (opt_data.feature.icon) {
+      ie_void('span', null, null, 'class', 'feature-icon icon-16-' + opt_data.feature.icon);
+    }
     ie_open('h1', null, null, 'class', 'feature-header');
     var dyn22 = opt_data.feature.title;
     if (typeof dyn22 == 'function') dyn22();else if (dyn22 != null) itext(dyn22);
@@ -36003,11 +36005,13 @@ goog.loadModule(function (exports) {
     var dyn23 = opt_data.feature.description;
     if (typeof dyn23 == 'function') dyn23();else if (dyn23 != null) itext(dyn23);
     ie_close('p');
-    ie_open('div', null, null, 'class', 'read-more');
-    ie_open('a', null, null, 'href', opt_data.feature.url);
-    itext('Read more\u2026');
-    ie_close('a');
-    ie_close('div');
+    if (opt_data.feature.url) {
+      ie_open('div', null, null, 'class', 'read-more');
+      ie_open('a', null, null, 'href', opt_data.feature.url);
+      itext('Read more\u2026');
+      ie_close('a');
+      ie_close('div');
+    }
     ie_close('div');
     ie_close('div');
   }
@@ -36227,7 +36231,8 @@ exports.default = templates;
 /* 376 */,
 /* 377 */,
 /* 378 */,
-/* 379 */
+/* 379 */,
+/* 380 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36334,7 +36339,6 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rubyTutorials, templa
 
 
 /***/ }),
-/* 380 */,
 /* 381 */,
 /* 382 */,
 /* 383 */,
@@ -36530,7 +36534,9 @@ __WEBPACK_IMPORTED_MODULE_1_metal_soy___default.a.register(rubyTutorials, templa
 /* 573 */,
 /* 574 */,
 /* 575 */,
-/* 576 */
+/* 576 */,
+/* 577 */,
+/* 578 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36582,7 +36588,7 @@ __webpack_require__(95);
 
 __webpack_require__(96);
 
-var _indexSoy = __webpack_require__(379);
+var _indexSoy = __webpack_require__(380);
 
 var _indexSoy2 = _interopRequireDefault(_indexSoy);
 
@@ -36613,4 +36619,4 @@ _metalSoy2.default.register(rubyTutorials, _indexSoy2.default);
 exports.default = rubyTutorials;
 
 /***/ })
-],[576]);
+],[578]);
